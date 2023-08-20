@@ -1,0 +1,135 @@
+.header{
+display: flex;
+justify-content: space-between;
+background-color: var(--color-white);
+position: relative;
+}
+.header_nav_burguer{
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/Menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+.header_nav{
+  display:none;
+  width: 60vw;
+}
+.header_nav_click:checked ~ .header_nav{
+  display: block;
+  position:absolute;
+  top: 100%;
+  background: var(--azul-degrade);
+}
+.header_nav_click{
+  display: none;
+}
+.header_nav_title{
+  color: var(--color-secondary);
+  font-family: var(--font-principal);
+  font-weight: 700;
+}
+.header_nav_item, .header_nav_title{
+  padding:1em ;
+  background: var(--color-white);
+}
+.header_nav_it_link{
+  background: var(--azul-degrade);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.container{
+  display: flex;
+  align-items: center;
+
+}
+.container_img{
+  padding: 1em;
+}
+
+/*Desabilitados*/
+.container_logo_text, .nav_opcoes-1024_1728, .container_links{
+  display: none;
+}
+
+@media screen and (min-width:1024px) {
+.header_nav_burguer {
+  display: none;
+}  
+.container_logo_text, .container_logo_text--negrito{
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--color-black);
+  font-size: 30px;
+}
+.container_logo_text{
+  font-weight:400;
+  display: block;
+  
+}
+.container_logo_text--negrito{
+  font-weight: 700;
+}
+
+.nav_opcoes-1024_1728{
+  display: flex;
+  align-items: center;
+
+}
+.nav_itens{
+  color: var(--color-black);
+  padding: 0 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.header_nav_1024:checked ~ .nav_scren_1024{
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: auto;
+
+}
+.header_nav_1024{
+  display: none;
+}
+.header_nav_1024:checked ~ .nav_rotulo > .nav_itens{
+  background: var(--azul-degrade);
+  color: var(--color-white);
+}
+.nav_itens{
+  padding: 2em 1em;
+}
+.header_nav_item:hover{
+  background: var(--azul-degrade);
+  
+}
+
+.header_nav_item:hover > .header_nav_it_link  {
+  -webkit-text-fill-color: var(--color-white);
+  
+  
+}
+}
+
+@media screen and (min-width:1728px) {
+  .header{
+    padding: 0 3em;
+    
+  }
+  .container_links{
+    display: flex;
+    align-items: center; 
+    margin-right: 2em;
+    font-size:20px;
+    color: var(--color-black);
+     
+  }
+  .container_img{
+    margin-right: -0.5em;
+  }
+  .nav_opcoes-1024_1728{
+    margin-right:auto;
+  }
+}
